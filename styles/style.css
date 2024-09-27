@@ -368,10 +368,11 @@
   background-color: var(--background-color);
   font-family: var(--accent-font);
   width: 19%;
-  height: 20%;
+  height: 21%;
   padding: 30px;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;;
   align-items: center;
   justify-items: center;
   column-gap: 10px;
@@ -431,11 +432,11 @@
   transform: translate(0);
 }
 
-.button:focus-visible {
+.button:focus {
   outline: none;
 }
 
-.button:focus {
+.button:focus-visible {
   box-shadow: 2px 2px 0 1px var(--button-color);
 }
 
