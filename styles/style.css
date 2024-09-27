@@ -108,8 +108,9 @@
   cursor: pointer;
 }
 
-.theme-menu__button:focus-visible {
+.theme-menu__button:focus {
   outline: none;
+  opacity: 0.6;
 }
 
 .theme-menu__button::after {
@@ -123,7 +124,7 @@
   transition: width 0.3s;
 }
 
-.theme-menu__button:focus::after {
+.theme-menu__button:focus-visible::after {
   width: 87%;
 }
 
