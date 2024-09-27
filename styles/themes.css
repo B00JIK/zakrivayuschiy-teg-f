@@ -39,17 +39,3 @@
     }
 }
 
-@media (prefers-color-scheme: light) { 
-    :root {
-        --title-weight: 700;
-        --text-weight: 400;
-        --background-color: #FFF;
-        --accent-color: #000;
-        --square-gradient-color: #d3d3d3;
-        --start-gradient-color: #e7e7e7;
-        --end-gradient-color: #1a1a1a;
-        --label-color: #fff;
-        --button-color: #fff;
-    }
-}
-

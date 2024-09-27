@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block-start: 75px;
+  padding-block-start: 100px;
   padding-block-end: 105px;
 }
 
@@ -48,14 +48,15 @@
   border: solid 2px var(--accent-color);
   max-width: 696px;
   width: 50%; 
-  padding-top: 15vh;
-  padding-bottom: 3vh;
+  padding-top: 14.2vh;
+  padding-bottom: 2.5vh;
   background-color: var(--background-color);
 }
 
 @media (width <= 765px) {
   .header {
     width: 100%;
+    padding-top: 13.8vh;
   }
 }
 
@@ -63,6 +64,11 @@
   font-family: var(--accent-font), sans-serif;
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   font-weight: 400;
+  text-decoration: 0;
+}
+
+.main-title:focus {
+  outline: none;
 }
 
 .title {
@@ -70,17 +76,24 @@
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
   font-weight: 400;
   text-transform: uppercase;
-  padding-top: 2vh;
+  padding-top: 2.3vh;
 }
 
 .theme-menu__list {
   font-family: var(--accent-font), sans-serif;
-  font-size: 11px;
-  padding-top: 2vh;
+  font-size: 14px;
+  padding-top: 1.5vh;
+  padding-left: 17px;
 }
 
 .theme-menu__item {
-  padding-block-start: 10px;
+  padding-block-start: 1vh;
+}
+
+@media (width <= 765px) {
+  .theme-menu__item {
+    padding-block-start: 1.4vh;
+  }
 }
 
 .theme-menu__button {
@@ -90,9 +103,9 @@
 .theme-menu__button {
   background-color: transparent;
   border: none;
-  /* padding-bottom: 10px; */
   position: relative;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .theme-menu__button:focus-visible {
@@ -105,12 +118,12 @@
   height: 3px;
   background-color: var(--accent-color);
   position: absolute;
-  bottom: 10px;
+  bottom: -3px;
   left: 5px;
   transition: width 0.3s;
 }
 
-.theme-menu__button:focus-visible::after {
+.theme-menu__button:focus::after {
   width: 87%;
 }
 
@@ -134,18 +147,6 @@
   animation: pointer 0.5s ease-in-out infinite;
 }
 
-@keyframes pointer {
-  0% {
-    left: -10px;
-  }
-  50% {
-    left: -14px;
-  }
-  100% {
-    left: -10px;
-  }
-}
-
 .theme-menu__button:disabled::after {
   content: '';
   color: transparent;
@@ -154,18 +155,19 @@
 }
 
 .main {
-  padding-block-start: 75px;
+  padding-block-start: 98px;
   max-width: 696px;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 38px;
+  gap: 53px;
 }
 
 @media (width <= 765px) {
   .main {
     width: 100%;
+    gap: 49px;
   }
 }
 
@@ -180,20 +182,39 @@
 
 .block-title {
   font-variation-settings: 'wght' var(--title-weight);
-  padding: 4px 5px;
+  padding: 4px 7px;
   font-size: 18px;
+}
+
+@media (width <= 765px) {
+  .block-title {
+    padding: 5px 9px;
+    font-size: 18px;
+  }
 }
 
 .image-container {
   position: relative;
+  border-top: solid 2px var(--accent-color);
+  border-bottom: solid 2px var(--accent-color);
+  height: 72.9vh;
+}
+
+@media (width <= 765px) {
+  .image-container {
+    width: 100%;
+    height: 42.8vh;
+  }
 }
 
 .label {
   position: absolute;
+  z-index: 1;
   color: var(--label-text-color);
-  top: 20px;
-  right: 20px;
+  top: 26px;
+  right: 23px;
   font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
   text-shadow:
     1px -1px 0 var(--label-color), -1px 1px 0 var(--label-color);
   mix-blend-mode: hard-light;
@@ -208,24 +229,46 @@
   }
 }
 
+@media (width <= 765px) {
+  .label {
+    top: 25px;
+    right: 12px;
+  }
+}
+
 .image {
   width: 100%;
-  border-top: solid 2px var(--accent-color);
-  border-bottom: solid 2px var(--accent-color);
+  height: 72.9vh;
+}
+
+@media (width <= 765px) {
+  .image {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .paragraph {
-  padding-block-start: 13px;
-  padding-block-end: 20px;
-  padding-left: 18px;
-  padding-right: 30px;
+  padding-block-start: 21px;
+  padding-block-end: 27px;
+  padding-left: 23px;
+  padding-right: 23px;
   font-size: 18px;
   font-variation-settings: 'wght' var(--text-weight);
 }
 
+@media (width <= 765px) {
+  .paragraph {
+    padding-block-start: 25px;
+    padding-left: 25px;
+    padding-right: 29px;
+  }
+}
+
 .paragraph:last-of-type {
   padding-block-start: 0;
-  padding-block-end: 0;
+  padding-block-end: 10px;
+  padding-right: 10px;
 }
 
 .container__like-button {
@@ -233,7 +276,9 @@
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  padding-block-start: 16px;
+  padding-block-start: 35px;
+  padding-block-end: 29px;
+  height: 38px;
 }
 
 .card__icon-button {
@@ -242,7 +287,8 @@
   align-items: center;
   border: solid 2px transparent;
   transition: border 0.3s ease;
-  padding: 0;
+  padding: 0 3px 0 0;
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible {
@@ -255,106 +301,17 @@
 }
 
 .like-icon {
-  height: 30px;
-}
-
-.heart {
-  transform-origin: center;
-}
-
-@keyframes heart-scale {
-  0% {
-    transform: scale(1.0);
-  }
-  100% {
-    transform: scale(1.5);
-  }
-}
-
-.like-icon.is-liked .heart {
-  animation: heart-scale 0.3s backwards;
-  animation-delay: 0.1s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-}
-
-.contour {
-  fill: var(--accent-color);
-  transition: fill 0.3s;
-  transition-delay: 0.06s;
-}
-
-.like-icon.is-liked .contour{
-  fill: var(--icon-accent-color);
-  transition: fill 0.1s;
-}
-
-.main-body {
-  fill: var(--background-color);
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
-}
-
-.card__icon-button:hover .main-body{
-  fill: var(--accent-color);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--icon-accent-color);
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--icon-accent-color);
-}
-
-.core {
-  fill: var(--background-color);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--accent-color);
-  transition: fill 0.03s;
-  transition-delay: 0.03s;
-}
-
-.card__icon-button:active .core {
-  fill: var(--icon-accent-color);
-}
-
-.like-icon.is-liked .core {
-  fill: var(--icon-accent-color);
-}
-
-.sparks {
-  fill: transparent;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s backwards;
-  animation-delay: 0.3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-}
-
-@keyframes sparks {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: var(--icon-accent-color);
-  }
+  height: 34px;
 }
 
 .card__like-button {
   background-color: transparent;
   border: none;
   font-family: var(--accent-font), sans-serif;
-  padding-right: 17px;
+  padding-right: 24px;
   padding-left: 0;
-  width: 130px;
+  width: 154px;
+  cursor: pointer;
 }
 
 .card__like-button:focus-visible {
@@ -380,50 +337,53 @@
 
 @media (width <= 765px) {
   .card__like-button {
-    width: 30%;
+    width: 42%;
   }
 }
 
-.button__text::before {
-  position: absolute;
-  z-index: 0;
-  content: '';
-  background-color: var(--button-color);
-  width: 100%;
-  height: 100%;
-  transform: translate(-100%);
-  transition: transform 0.5s ease-in-out;
-  mix-blend-mode: difference;
-}
+  .button__text::before {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    background-color: var(--button-color);
+    width: 100%;
+    height: 100%;
+    transform: translate(-100%);
+    transition: transform 0.5s ease-in-out;
+    mix-blend-mode: difference;
+  }
 
-.card__like-button:hover > .button__text::before {
-  transform: translate(0);
-}
+  .card__like-button:hover > .button__text::before {
+    transform: translate(0);
+  }
 
-.card__like-button:focus-visible > .button__text {
-  box-shadow: 2px 2px 0 1px var(--button-color);
-}
+  .card__like-button:focus > .button__text {
+    box-shadow: 2px 2px 0 1px var(--button-color);
+  }
 
 .dialog {
   border: solid 2px var(--accent-color);
   color: var(--accent-color);
+  background-color: var(--background-color);
   font-family: var(--accent-font);
-  width: 27%;
+  width: 19%;
+  height: 20%;
   padding: 30px;
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr 5fr;
   align-items: center;
   justify-items: center;
   column-gap: 10px;
   row-gap: 30px;
-  line-height: 18px;
+  line-height: 20px;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 @media (width <= 765px) {
   .dialog {
     width: 100%;
-    padding: 30px 42px;
+    height: 23%;
   }
 }
 
@@ -440,14 +400,47 @@
   width: 100%;
   height: 38px;
   background-color: transparent;
-  border: solid 2px var(--accent-color);
+  border: solid 2px var(--button-color);
+  color: var(--button-color)  ;
   grid-column-start: 1;
   grid-column-end: 3;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  mix-blend-mode: difference;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.button::before {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  background-color: var(--button-color);
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translate(-100%);
+  transition: transform 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.button:hover.button::before {
+  transform: translate(0);
+}
+
+.button:focus-visible {
+  outline: none;
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0 1px var(--button-color);
 }
 
 .dialog::backdrop {
   background-color: #000;
-  opacity: 70%;
+  opacity: 75%;
 }
 
 .save-button {
@@ -456,15 +449,27 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   display: flex;
-  height: 46px;
+  height: 55px;
   width: 49%;
   align-items: center;
   justify-content: space-evenly;
+  transition: box-shadow 0.3s;
   color: var(--accent-color);
   position: relative;
   overflow: hidden;
   z-index: 1;
   padding: 18px 20px 18px 18px;
+  cursor: pointer;
+}
+
+@media (width <= 765px) {
+  .save-button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 8px 4px;
+    height: 82px;
+    width: 83%;
+  }
 }
 
 .save-button::before {
@@ -472,8 +477,7 @@
   z-index: 0;
   content: '';
   background-color: var(--button-color);
-  font-size: 14px;
-  width: 100%;
+  width: 101%;
   height: 100%;
   transform: translate(-100%);
   transition: transform 0.5s ease-in-out;
@@ -484,30 +488,25 @@
   transform: translate(0);
 }
 
-.save-button:focus-visible {
+.save-button:focus {
   outline: none;
-  box-shadow: 2px 2px 0 1px var(--button-color);
+  box-shadow: 2px 2px 0 1px var(--accent-color);
 }
 
-
-@media (width <= 765px) {
-  .save-button {
-    display: flex;
-    flex-direction: column;
-    height: 80px;
-    width: 85%;
-  }
+.save-button:focus-visible {
+  outline: none;
 }
 
 .svg-image {
   fill: var(--accent-color);
-  width: 27px;
+  width: 28px;
 }
 
 
 @media (width <= 765px) {
   .svg-image {
-    width: 100%;
+    width: 36px;
+    height: 36px;
   }
 }
 
