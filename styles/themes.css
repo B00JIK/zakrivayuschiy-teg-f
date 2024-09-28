@@ -35,7 +35,11 @@
         --text-weight: 465;
         --background-color: #000;
         --accent-color: #00CC14;
-        --square-gradient-color: #00CC14;
+        --label-color: #000;
+        --button-color: #00CC14;
+        --square-gradient-color: #000;
+        --start-gradient-color: #007f0c;
+        --end-gradient-color: #004306;
     }
 }
 
