@@ -46,7 +46,7 @@
   justify-content: center;
   align-items: center;
   border: solid 2px var(--accent-color);
-  max-width: 696px;
+  max-width: 700px;
   width: 50%; 
   padding-top: 136px;
   padding-bottom: 25px;
@@ -157,19 +157,19 @@
 
 .main {
   padding-block-start: 102px;
-  max-width: 696px;
+  max-width: 700px;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50.5px;
+  gap: 50px;
 }
 
 @media (width <= 765px) {
   .main {
     padding-block-start: 99px;
     width: 100%;
-    gap: 50px;
+    gap: 51.5px;
   }
 }
 
@@ -184,7 +184,7 @@
 
 .block-title {
   font-variation-settings: 'wght' var(--title-weight);
-  padding: 4px 7px;
+  padding: 5px 9px;
   font-size: 18px;
 }
 
@@ -197,15 +197,15 @@
 
 .image-container {
   position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
   border-top: solid 2px var(--accent-color);
   border-bottom: solid 2px var(--accent-color);
-  height: 696.5px;
 }
 
 @media (width <= 765px) {
   .image-container {
     width: 100%;
-    height: 373px;
   }
 }
 
@@ -240,7 +240,8 @@
 
 .image {
   width: 100%;
-  height: 697px;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (width <= 765px) {
@@ -251,17 +252,17 @@
 }
 
 .paragraph {
-  padding-block-start: 30px;
+  padding-block-start: 29px;
   padding-block-end: 26px;
-  padding-left: 25px;
-  padding-right: 20.5px;
+  padding-left: 24px;
+  padding-right: 25.5px;
   font-size: 18px;
   font-variation-settings: 'wght' var(--text-weight);
 }
 
 @media (width <= 765px) {
   .paragraph {
-    padding-block-start: 26px;
+    padding-block-start: 26.5px;
     padding-block-end: 27px;
     padding-left: 25px;
     padding-right: 26px;
