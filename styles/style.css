@@ -373,13 +373,13 @@
   min-height: 195px;
   width: 25vw;
   height: 22vh;
-  padding: 3.4vh;
+  padding: 30px;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-items: start;
-  row-gap: 3.4vh;
+  row-gap: 30px;
   line-height: 21px;
   font-size: 14px;
   text-transform: uppercase;
@@ -389,11 +389,9 @@
   .dialog {
     width: 90vw;
     height: 21vh;
-    padding-left: 4.4vh;
-    padding-right: 4.4vh;
-    padding-top: 3.7vh;
-    row-gap: 3vh;
-    column-gap: 1.1vh;
+    padding-left: 10.2vw;
+    padding-right: 10.2vw;
+    column-gap: 3.1vw;
   }
 }
 
